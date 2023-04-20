@@ -4,7 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Text
 
 
-PG_DSN = f'postgresql+asyncpg://postgres:postgres@127.0.0.1:5431/netology_async'
+PG_DSN = f'postgresql+asyncpg://postgres:2345@127.0.0.1:5431/asyncio'
 engine = create_async_engine(PG_DSN)
 Base = declarative_base(bind=engine)
 Session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
